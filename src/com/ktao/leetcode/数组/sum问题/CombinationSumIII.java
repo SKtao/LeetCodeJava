@@ -1,4 +1,4 @@
-package com.ktao.leetcode;
+package com.ktao.leetcode.数组.sum问题;
 
 import java.util.ArrayList;
 import java.util.List;

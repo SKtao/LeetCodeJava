@@ -54,14 +54,14 @@ public class MedianofTwoSortedArrays {
         }
         int m1 = left, m2 = k - left;
         // 左中位数
-        int c1 = Math.max(m1 == 0 ? Integer.MAX_VALUE : nums1[m1 - 1],
-                m2 == 0 ? Integer.MAX_VALUE : nums2[m2 - 1]);
+        int c1 = Math.max(m1 == 0 ? Integer.MIN_VALUE : nums1[m1 - 1],
+                m2 == 0 ? Integer.MIN_VALUE : nums2[m2 - 1]);
         if ((n1 + n2) % 2 == 1) {
             return c1;
         }
         // 右中位数
-        int c2 = Math.min(m1 == n1 ? Integer.MIN_VALUE : nums1[m1],
-                m1 == n2 ? Integer.MAX_VALUE : nums2[m2]);
+        int c2 = Math.min(m1 == n1 ? Integer.MAX_VALUE : nums1[m1],
+                m2 == n2 ? Integer.MAX_VALUE : nums2[m2]);
         return (c1 + c2) * 0.5;
     }
 }

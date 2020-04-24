@@ -1,4 +1,4 @@
-package com.ktao.leetcode;
+package com.ktao.leetcode.数组;
 
 /**
  * @author kongtao
