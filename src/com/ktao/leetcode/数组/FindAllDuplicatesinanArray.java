@@ -1,5 +1,6 @@
 package com.ktao.leetcode.数组;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,7 +26,26 @@ public class FindAllDuplicatesinanArray {
      * 输出:
      * [2,3]
      */
-    public List<Integer> findDuplicates(int[] nums) {
 
+    // [4,3,2,7,8,2,3,1] => [4,3,2,-7,8,2,3,1] => [4,3,-2,-7,8,2,3,1] => [4,-3,-2,-7,8,2,3,1]
+    // => [4,-3,-2,-7,8,2,3,-1] => [4,3,-2,-7,8,2,3,-1] => [4,3,2,-7,8,2,3,-1] => [-4,3,2,-7,8,2,3,-1]
+    // 遍历过程中，2和3这俩元素被操作了两次，因此这两个数为重复出现两次的结果
+    public static List<Integer> findDuplicates(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+        for (int num : nums){
+            int index = Math.abs(num) - 1;
+            if (nums[index] < 0){
+                res.add(index + 1);
+                continue;
+            }
+            nums[index] = -nums[index];
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {4,3,2,7,8,2,3,1};
+        List<Integer> res = findDuplicates(nums);
+        res.forEach(System.out::println);
     }
 }

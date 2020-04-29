@@ -1,6 +1,7 @@
 package com.ktao.leetcode.树;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -55,4 +56,20 @@ public class BinaryTreeTraversal {
     }
 
     // 后序遍历
+    public List<Integer> postorderTraversal(TreeNode root) {
+//        List<Integer> res = new ArrayList<>();
+        LinkedList<Integer> res = new LinkedList<>();
+        if (root == null) return res;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode cur = stack.pop();
+            // 前插
+//            res.add(0, cur.val);
+            res.addFirst(cur.val);
+            if (cur.left != null) stack.push(cur.left);
+            if (cur.right != null) stack.push(cur.right);
+        }
+        return res;
+    }
 }
