@@ -1,6 +1,5 @@
 package com.ktao.leetcode.链表;
 
-import java.util.List;
 
 /**
  * 2.两数相加
