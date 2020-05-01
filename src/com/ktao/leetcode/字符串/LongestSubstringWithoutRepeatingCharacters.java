@@ -25,7 +25,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * 输出: 1
      * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
      */
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int left = 0;
         int maxLen = 0;
@@ -38,5 +38,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         }
         return maxLen;
+    }
+
+    public static void main(String[] args) {
+        String str = "abba";
+        System.out.println(lengthOfLongestSubstring(str));
     }
 }

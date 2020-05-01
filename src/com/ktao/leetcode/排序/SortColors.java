@@ -26,7 +26,23 @@ public class SortColors {
      * 首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
      * 你能想出一个仅使用常数空间的一趟扫描算法吗？
      */
-    public void sortColors(int[] nums) {
 
+    // 思路：双指针(类似快排)
+    public void sortColors(int[] nums) {
+        int p0 = 0, p2 = nums.length - 1, cur = 0;
+        while (cur <= p2){
+            if (nums[cur] == 0){
+                swap(nums, p0++, cur++);
+            } else if (nums[cur] == 2){
+                // 这里不移动cur
+                swap(nums, cur, p2--);
+            } else cur++;
+        }
+    }
+
+    private void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
