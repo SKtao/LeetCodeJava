@@ -1,4 +1,4 @@
-package com.ktao.leetcode;
+package com.ktao.leetcode.动态规划;
 
 /**
  * 53. Maximum Subarray
