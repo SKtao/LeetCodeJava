@@ -27,13 +27,13 @@
 |355| [设计推特](src/com/ktao/leetcode/solutions/355.设计推特.md) |中等|
 |380| [常数时间插入、删除和获取随机元素](src/com/ktao/leetcode/solutions/380.常数时间插入、删除和获取随机元素.md) |中等|
 ## 目录
-| # | 题名 | 难度 | 备注|
-|---| -------- | ---------- |---------- |
-|1| [两数之和](src/com/ktao/leetcode/solutions/1.两数之和.md)|简单|Map, 时间复杂O(n)|
+| # | 题名 | 难度 |
+|---| -------- | ---------- |
+|1| [两数之和](src/com/ktao/leetcode/solutions/1.两数之和.md)|简单|
 |2| [两数相加](src/com/ktao/leetcode/solutions/2.两数相加.md) |中等|
 |3| [无重复字符的最长子串](src/com/ktao/leetcode/solutions/3.无重复字符的最长子串.md) |中等|
 |4| [寻找两个有序数组的中位数](src/com/ktao/leetcode/solutions/4.寻找两个有序数组的中位数.md) |困难|
-|5| [最长回文子串](src/com/ktao/leetcode/solutions/5.最长回文子串.md) |中等|1).动态规划 2).中心点扩散法 3).马拉车算法|
+|5| [最长回文子串](src/com/ktao/leetcode/solutions/5.最长回文子串.md) |
 |6| [Z字形变换](src/com/ktao/leetcode/solutions/6.Z字形变换.md) |中等|
 |7| [整数反转](src/com/ktao/leetcode/solutions/7.整数反转.md) |简单|
 |8| [字符串转换整数(atoi)](src/com/ktao/leetcode/solutions/8.字符串转整数(atoi).md) |中等|
@@ -116,11 +116,6 @@
 |94| [二叉树的中序遍历](src/com/ktao/leetcode/solutions/94.二叉树的中序遍历.md) |中等|
 |95| [不同的二叉搜索树II](src/com/ktao/leetcode/solutions/95.不同的二叉搜索树II.md) |中等|
 |97| [交错字符串](src/com/ktao/leetcode/solutions/97.交错字符串.md) |困难|
-
----
-
-| # | 题名 | 难度 | 备注|
-|---| -------- | ---------- |---------- |
 |106| [从中序与后序遍历序列构造二叉树](src/com/ktao/leetcode/solutions/106.从中序与后序遍历序列构造二叉树.md) |中等|
 |107| [二叉树的层次遍历II](src/com/ktao/leetcode/solutions/107.二叉树的层次遍历II.md) |简单|
 |109| [有序链表转换二叉搜索树](src/com/ktao/leetcode/solutions/109.有序链表转换二叉搜索树.md) |中等|

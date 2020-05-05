@@ -16,12 +16,30 @@ public class SwapNodesinPairs {
      *
      * 给定 1->2->3->4, 你应该返回 2->1->4->3.
      */
-    public ListNode swapPairs(ListNode head) {
+
+    // 递归
+    public ListNode swapPairs1(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode p1 = head, p2 = head.next;
         ListNode next = p2.next;
-        p1.next = swapPairs(next);
+        p1.next = swapPairs1(next);
         p2.next = p1;
         return p2;
+    }
+
+    // 循环迭代
+    public ListNode swapPairs2(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode dummy = new ListNode(-1), pre = dummy, pNode = head, pNext = head.next;
+        dummy.next = head;
+        while (pNode != null && pNode.next != null){
+            pre.next = pNext;
+            pNode.next = pNext.next;
+            pNext.next = pNode;
+            pre = pNode;
+            pNode = pNode.next;
+            if (pNode != null) pNext = pNode.next;
+        }
+        return dummy.next;
     }
 }
