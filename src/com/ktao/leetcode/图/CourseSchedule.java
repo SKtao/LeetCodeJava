@@ -1,7 +1,5 @@
 package com.ktao.leetcode.图;
 
-import com.sun.tools.javac.util.List;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -54,7 +52,7 @@ public class CourseSchedule {
      */
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int[] inDegrees = new int[numCourses];
-        List<List<Integer>> graph = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
         for (int i = 0; i < numCourses; i++) graph.add(new ArrayList<>());
         for (int[] p: prerequisites){
             inDegrees[p[0]]++;
