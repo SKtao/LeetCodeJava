@@ -29,7 +29,7 @@ public class _188_Best_Time_to_Buy_and_Sell_Stock_IV {
      * 解释: 在第 2 天 (股票价格 = 2) 的时候买入，在第 3 天 (股票价格 = 6) 的时候卖出, 这笔交易所能获得利润 = 6-2 = 4 。
      *      随后，在第 5 天 (股票价格 = 0) 的时候买入，在第 6 天 (股票价格 = 3) 的时候卖出, 这笔交易所能获得利润 = 3-0 = 3 。
      */
-    public int maxProfit(int k, int[] prices) {
+    public static int maxProfit(int k, int[] prices) {
         if (k == 0) return 0;
         // 当k大于等于数组长度一半时, 问题退化为贪心问题
         if(k >= prices.length/2) return greedy(prices);
@@ -49,12 +49,17 @@ public class _188_Best_Time_to_Buy_and_Sell_Stock_IV {
         return dpSell[k-1];
     }
 
-    private int greedy(int[] prices) {
+    private static int greedy(int[] prices) {
         int max = 0;
         for(int i = 1; i < prices.length; ++i) {
             if(prices[i] > prices[i-1])
                 max += prices[i] - prices[i-1];
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {3,2,6,5,0,3};
+        System.out.println(maxProfit(2, nums));
     }
 }
